@@ -58,4 +58,10 @@ public class Alabanzas extends AppCompatActivity {
         return id +  " ~ "
                 + titulo;
     }
+
+    public  String tostring(){
+        return "TÍTULO: " + titulo + "\n"+
+                "AUTOR: " + autor + "\n\n"+
+                "LETRA: " +  "\n" + letra ;
+    }
 }
