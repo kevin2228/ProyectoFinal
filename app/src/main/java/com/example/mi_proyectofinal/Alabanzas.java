@@ -52,4 +52,10 @@ public class Alabanzas extends AppCompatActivity {
     public void setLetra(String letra) {
         this.letra = letra;
     }
+
+    @Override
+    public String toString() {
+        return id +  " ~ "
+                + titulo;
+    }
 }
