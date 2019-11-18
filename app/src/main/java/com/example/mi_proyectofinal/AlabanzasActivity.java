@@ -105,11 +105,7 @@ public class AlabanzasActivity extends AppCompatActivity {
         cliente.post(url + parametros, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                if (statusCode == 200){
-                    Toast.makeText(AlabanzasActivity.this, "Alabanza agregada correctamente", Toast.LENGTH_SHORT).show();
-                    ettitulo.setText("");
-                    etautor.setText("");
-                    etletra.setText("");
+
                 }
             }
 
