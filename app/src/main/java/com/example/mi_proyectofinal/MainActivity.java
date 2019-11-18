@@ -80,4 +80,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, AlabanzasActivity.class);
         MainActivity.this.startActivity(intent);
     }
+
+    public void rC(View view) {
+        Intent intent = new Intent(MainActivity.this, CorosActivity.class);
+        MainActivity.this.startActivity(intent);
+    }
 }
