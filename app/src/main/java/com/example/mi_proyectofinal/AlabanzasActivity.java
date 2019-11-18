@@ -80,19 +80,7 @@ public class AlabanzasActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (ettitulo.getText().toString().length()== 0 )  {
                     ettitulo.setError("Campo Obligatorio");
-                }else if (etautor.getText().toString().length()== 0){
-                    etautor.setError("Campo Obligatorio");
-                }else  if (etletra.getText().toString().length()== 0){
-                    etletra.setError("Campo Obligatorio");
-                }else{
-                    Alabanzas a = new Alabanzas();
-                    a.setTitulo(ettitulo.getText().toString().replaceAll(" ", "%20"));
-                    a.setAutor(etautor.getText().toString().replaceAll(" ", "%20"));
-                    a.setLetra(etletra.getText().toString().replaceAll(" ", "%20"));
 
-                    agregarAlabanza(a);
-
-                    obtenerAlabanzas();
                 }
             }
         });
