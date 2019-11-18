@@ -6,11 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+
+import org.json.JSONArray;
+
+import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -75,4 +80,22 @@ public class registro_alabanzas extends AppCompatActivity {
             }
         });
     }
+
+    private  void listarAlabanzas(String respuesta){
+        final ArrayList<Alabanzas> lista = new ArrayList<Alabanzas>();
+        try{
+            JSONArray jsonArreglo = new JSONArray(respuesta);
+            for (int i=0; i<jsonArreglo.length(); i++){
+                Alabanzas a = new Alabanzas();
+                a.setId(jsonArreglo.getJSONObject(i).getInt("id_a"));
+                a.setTitulo(jsonArreglo.getJSONObject(i).getString("titulo"));
+                a.setAutor(jsonArreglo.getJSONObject(i).getString("autor"));
+                a.setLetra(jsonArreglo.getJSONObject(i).getString("letra"));
+
+                lista.add(a);
+
+            }
+
+            final ArrayAdapter<Alabanzas> a = new ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, lista);
+            lvdatos.setAdapter(a);
 }
