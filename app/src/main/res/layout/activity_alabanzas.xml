@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AlabanzasActivity"
-    android:layout_margin="10dp"
+
+    android:background="#73ACF0"
     >
 
     <TextView
@@ -17,6 +18,9 @@
         android:textColor="#000"
         android:textStyle="bold"
         android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         />
     <ScrollView
         android:layout_width="match_parent"
@@ -39,6 +43,8 @@
                 android:inputType="text"
                 android:background="@drawable/inputboton"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 />
 
             <EditText
@@ -50,7 +56,10 @@
                 android:hint="Autor"
                 android:layout_marginTop="10dp"
                 android:inputType="text"
-                android:background="@drawable/inputboton"/>
+                android:background="@drawable/inputboton"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
 
             <EditText
                 android:id="@+id/etletra"
@@ -59,15 +68,19 @@
                 android:textAlignment="center"
                 android:hint="Letra"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/inputboton"/>
+                android:background="@drawable/inputboton"
+                android:layout_margin="10dp"
+                />
 
             <Button
                 android:id="@+id/btnRegistrarA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Registrar"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_estilo"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 />
 
         </LinearLayout>
