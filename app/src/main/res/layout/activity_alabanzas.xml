@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".AlabanzasActivity"
 
-    android:background="#73ACF0"
+    android:background="#71B4F5"
     >
 
     <TextView
