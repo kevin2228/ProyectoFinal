@@ -5,16 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CorosActivity">
+    tools:context=".CorosActivity"
+    android:background="#71B4F5"
+    >
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registro de Coros"
+        android:text="REGISTRO DE COROS"
         android:textAlignment="center"
         android:textColor="#000"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginTop="10dp"
         />
 
     <ScrollView
@@ -31,25 +35,32 @@
             <EditText
                 android:id="@+id/ettituloc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:hint="Título"
                 android:inputType="text"
                 android:background="@drawable/inputboton"
                 android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
                 />
 
             <EditText
                 android:id="@+id/etautorc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:textAlignment="center"
                 android:textSize="15dp"
                 android:hint="Autor"
                 android:layout_marginTop="10dp"
                 android:inputType="text"
-                android:background="@drawable/inputboton"/>
+                android:background="@drawable/inputboton"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                />
 
             <EditText
                 android:id="@+id/etletrac"
@@ -58,7 +69,11 @@
                 android:textAlignment="center"
                 android:hint="Letra"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/inputboton"/>
+                android:background="@drawable/inputboton"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                />
 
 
             <Button
@@ -66,8 +81,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Registrar"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/btn_estilo"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20dp"
                 />
 
         </LinearLayout>
