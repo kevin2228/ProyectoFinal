@@ -48,6 +48,18 @@ public class AlabanzasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alabanzas);
 
+        ettitulo = findViewById(R.id.ettitulo);
+        etautor = findViewById(R.id.etautor);
+        etletra = findViewById(R.id.etletra);
+
+        btnRegistrar = findViewById(R.id.btnRegistrarA);
+
+        lvdatos = findViewById(R.id.lvDatosRa);
+
+        cliente = new AsyncHttpClient();
+
+        almacenarAlabanzas();
+        obtenerAlabanzas();
 
     }
 }
