@@ -110,6 +110,7 @@ public class CorosActivity extends AppCompatActivity {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
 
+
             }
         });
     }
