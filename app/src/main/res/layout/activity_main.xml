@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@drawable/cristo"
+    android:background="@drawable/cruzita"
     >
 
     <Button
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="425dp"
         android:background="@drawable/btn_estilo"
         android:onClick="rA"
         android:text="Registrar Alabanzas" />
