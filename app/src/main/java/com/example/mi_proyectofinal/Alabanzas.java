@@ -11,7 +11,6 @@ public class Alabanzas extends AppCompatActivity {
     private String autor;
     private String letra;
 
-
-
-
+    public Alabanzas() {
+    }
 }
