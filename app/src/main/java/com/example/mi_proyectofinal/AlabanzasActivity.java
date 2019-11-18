@@ -112,4 +112,21 @@ public class AlabanzasActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void obtenerAlabanzas(){
+        String url = "https://proyectofinalsis21.000webhostapp.com/obtenerDatos.php";
+        cliente.post(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                if (statusCode == 200){
+                    listarAlabanzas(new String(responseBody));
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
+    }
 }
