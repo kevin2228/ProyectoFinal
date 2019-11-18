@@ -16,9 +16,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
 import org.json.JSONArray;
 
 import java.util.ArrayList;
+
+import cz.msebera.android.httpclient.Header;
 
 public class registro_coros extends AppCompatActivity {
     private AsyncHttpClient clientec = new AsyncHttpClient();
@@ -66,15 +71,16 @@ public class registro_coros extends AppCompatActivity {
     private void obtenerCoros(){
         String url = "https://proyectofinalsis21.000webhostapp.com/obtenerDatosCoro.php";
         clientec.post(url, new AsyncHttpResponseHandler() {
+
             @Override
-            public void onSuccess(int statusCode, PreferenceActivity.Header[] headers, byte[] responseBody) {
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200){
                     listarCoros(new String(responseBody));
-                }
+            }
             }
 
             @Override
-            public void onFailure(int statusCode, PreferenceActivity.Header[] headers, byte[] responseBody, Throwable error) {
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
 
             }
         });
