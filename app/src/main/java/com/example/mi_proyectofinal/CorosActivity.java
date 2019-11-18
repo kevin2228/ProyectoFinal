@@ -92,7 +92,7 @@ public class CorosActivity extends AppCompatActivity {
     }
 
     private  void agregarCoros(Coros a){
-        String url = "https://proyectofinalsis21.000webhostapp.com/agregarcoro.php?";
+
         String parametros = "titulo="+a.getTitulo()+"&autor="+a.getAutor()+"&letra="+a.getLetra();
         clientec.post(url + parametros, new AsyncHttpResponseHandler() {
             @Override
