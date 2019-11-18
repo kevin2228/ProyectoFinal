@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.view.KeyEvent;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -42,5 +43,31 @@ public class registro_coros extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_coros);
+
+        lvdatosc = findViewById(R.id.lvDatosRc);
+        buscar = findViewById(R.id.buscarc);
+        clientec = new AsyncHttpClient();
+
+
+        obtenerCoros();
+
     }
+
+    private void obtenerCoros(){
+        String url = "https://proyectofinalsis21.000webhostapp.com/obtenerDatosCoro.php";
+        clientec.post(url, new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, PreferenceActivity.Header[] headers, byte[] responseBody) {
+                if (statusCode == 200){
+                    listarCoros(new String(responseBody));
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, PreferenceActivity.Header[] headers, byte[] responseBody, Throwable error) {
+
+            }
+        });
+    }
+
 }
