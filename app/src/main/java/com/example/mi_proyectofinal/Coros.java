@@ -9,5 +9,10 @@ public class Coros {
     public Coros() {
     }
 
-
+    public Coros(int id, String titulo, String autor, String letra) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.letra = letra;
+    }
 }
