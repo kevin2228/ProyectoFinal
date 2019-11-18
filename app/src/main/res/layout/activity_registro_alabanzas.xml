@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".registro_alabanzas">
 
     <EditText
         android:id="@+id/buscar"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:textAlignment="center"
+        android:background="@drawable/inputboton"
         android:hint="Buscar"
-        android:background="@drawable/inputboton"/>
+        android:textAlignment="center" />
 
     <ListView
         android:id="@+id/lvDatosRa"
