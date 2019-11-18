@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".registro_coros">
+    tools:context=".registro_coros"
+    android:background="#71B4F5"
+    >
 
     <EditText
         android:id="@+id/buscarc"
@@ -15,6 +17,9 @@
         android:hint="Buscar"
         android:textAlignment="center"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
         />
 
     <ListView
@@ -22,6 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="15dp"
-        android:dividerHeight="8dp" />
+        android:dividerHeight="8dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        />
 
 </LinearLayout>
