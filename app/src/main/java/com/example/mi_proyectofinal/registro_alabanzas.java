@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -117,4 +120,60 @@ public class registro_alabanzas extends AppCompatActivity {
 
                 }
             });
+
+            lvdatos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Alabanzas a = lista.get(position);
+                    String url = "https://proyectofinalsis21.000webhostapp.com/eliminar.php?id_a="+a.getId();
+
+                    cliente.post(url, new AsyncHttpResponseHandler() {
+                        @Override
+                        public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                            if (statusCode == 200){
+                                Toast.makeText(registro_alabanzas.this, "Alabanza liminada Correctamente", Toast.LENGTH_SHORT).show();
+                                try {
+                                    Thread.sleep(1000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                                obtenerAlabanzas();
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+                        }
+                    });
+
+                    return true;
+                }
+            });
+
+
+            lvdatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Alabanzas a = lista.get(position);
+                    StringBuffer b = new StringBuffer();
+                    b.append("ID: " + a.getId() + "\n");
+                    b.append("TITULO: " + a.getTitulo() + "\n");
+                    b.append("AUTOR: " + a.getTitulo() + "\n");
+                    b.append("LETRA: " + a.getLetra() + "\n");
+
+                    AlertDialog.Builder al = new AlertDialog.Builder(registro_alabanzas.this);
+                    al.setCancelable(true);
+                    al.setTitle("Descripción Alabanza");
+                    al.setMessage(a.tostring());
+                    al.show();
+                }
+            });
+        }catch(Exception el){
+            el.printStackTrace();
+        }
+
+
+    }
 }
