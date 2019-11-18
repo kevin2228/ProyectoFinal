@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".registro_alabanzas">
+    tools:context=".registro_alabanzas"
+    android:background="#71B4F5"
+    >
 
     <EditText
         android:id="@+id/buscar"
@@ -13,14 +15,22 @@
         android:layout_height="35dp"
         android:background="@drawable/inputboton"
         android:hint="Buscar"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        />
 
     <ListView
         android:id="@+id/lvDatosRa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="15dp"
-        android:dividerHeight="8dp" />
+        android:dividerHeight="8dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        />
 
 
 </LinearLayout>
